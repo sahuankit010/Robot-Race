@@ -37,7 +37,7 @@ Steps to Open Project:
 
 Open IntelliJ IDEA or any other IDE
 
-Click on File -> New -> Project From Existing Resources
+Click on File -> Open -> Select Kayak-SWE-Intern
 
 Solutions Location:
 
