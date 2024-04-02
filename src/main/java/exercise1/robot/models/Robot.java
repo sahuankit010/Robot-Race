@@ -34,17 +34,25 @@ public class Robot implements RobotInterface {
             throw new IllegalArgumentException("Input command can't empty.");
         else if (!ValidationCommand.isValidCommand(instructions)) throw new IllegalCommand(instructions);
 
-        List<Character> commands = ModelUtility.convertStringToCharList(instructions);
+//        List<Character> commands = ModelUtility.convertStringToCharList(instructions);
 
-        for (int i = 0; i < commands.size(); i++) {
-            /**
-             * https://www.baeldung.com/java-convert-char-to-string
-             */
-            String comp = String.valueOf(commands.get(i));
+
+        for(char ch: instructions.toCharArray()){
+            String comp = String.valueOf(ch);
             if (comp.equals(MovementInstruction.MOVE_FORWARD.getValue())) moveForward();
             else if (comp.equals(MovementInstruction.TURN_LEFT.getValue())) turnLeftOperation();
             else if (comp.equals(MovementInstruction.TURN_RIGHT.getValue())) turnRightOperation();
         }
+
+//        for (int i = 0; i < commands.size(); i++) {
+//            /**
+//             * https://www.baeldung.com/java-convert-char-to-string
+//             */
+//            String comp = String.valueOf(commands.get(i));
+//            if (comp.equals(MovementInstruction.MOVE_FORWARD.getValue())) moveForward();
+//            else if (comp.equals(MovementInstruction.TURN_LEFT.getValue())) turnLeftOperation();
+//            else if (comp.equals(MovementInstruction.TURN_RIGHT.getValue())) turnRightOperation();
+//        }
 
     }
 

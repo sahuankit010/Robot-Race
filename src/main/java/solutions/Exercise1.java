@@ -14,7 +14,7 @@ public class Exercise1 {
     public static void main(String[] args) {
         // assumption: original direction is NORTH as given example "FF" results in [0,2] u can change it in the next line
         Robot robot = new Robot(FacingDirection.NORTH);
-        robot.move("FF");
+        robot.move("LFFFRFFFRRFFF");
 
         System.out.println(robot.getCoordinate());
     }
